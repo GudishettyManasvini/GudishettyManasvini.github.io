@@ -10,9 +10,39 @@
     padding: 10px;
 }
 
-li {
+header li {
     display: inline-block;
     font-size: 20px;
     padding: 5px;
 
+}
+header a {
+    text-decoration: none;
+}
+.row {
+    display: flex;
+    padding: 20px;
+    justify-content:space-around;
+}
+.box {
+    width: 300px;
+}
+.btn sign-up {
+    background-color: aqua;
+    margin-top: 20px;
+    padding:10px;
+    font-size: 20px;
+    border-radius: 10px;
+    border:none;
+}
+.summary {
+    font-size: 20px;
+    margin-top: 10px;
+    font-family:'Times New Roman';
+}
+.image {
+    border-radius: 50px;
+}
+.title {
+    font-size: 30px;
 }
