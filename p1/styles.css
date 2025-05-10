@@ -26,9 +26,13 @@ header a {
 }
 .box {
     width: 300px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 20px;
+    margin: 10px;
 }
-.btn sign-up {
-    background-color: aqua;
+.btnsign-up {
+    background-color:grey;
     margin-top: 20px;
     padding:10px;
     font-size: 20px;
@@ -45,4 +49,13 @@ header a {
 }
 .title {
     font-size: 30px;
+}
+.section-title {
+    text-align: center;
+    font-size: 40px;
+}
+.footer {
+    text-align: center;
+    background-color: blanchedalmond;
+    font-size: large;
 }
