@@ -9,31 +9,34 @@
             margin: 0;
             height: 100vh;
             display: flex;
-            justify-content: center; /* Horizontal centering */
-            align-items: center;    /* Vertical centering */
+            justify-content: center; 
+            align-items: center;    
         }
 
         .text {
             text-align: center;
             font-size: 30px;
-            color:cornflowerblue(31, 162, 206);
+            color:brown(31, 162, 206);
         }
 
         @media(min-width: 1000px) {
             .text {
                 font-size: 50px;
+                background-color: gray;
             }
         }
 
         @media (min-width:700px) and (max-width:999px) {
             .text {
                 font-size: 40px;
+                background-color: cadetblue;
             }
         }
 
         @media(max-width:699px) {
             .text {
                 font-size: 25px;
+                background-color: burlywood;
             }
         }
     </style>
