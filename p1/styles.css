@@ -1,6 +1,6 @@
 .container {
-    width: 90px;
-    margin:auto;
+    width: 100px;
+    margin:100px;
 }
     header {
     display: flex;
@@ -26,7 +26,7 @@ header a {
 }
 .box {
     width: 300px;
-    padding: 30px;
+    padding:100px;
     background-color:#D2B48C;
     border-radius: 20px;
     margin: 10px;
@@ -52,25 +52,63 @@ header a {
     font-size: 30px;
 }
 .section-title {
-    text-align: center;
+    text-align:center;
     font-size: 30px;
 }
-.service {
+.service-container {
+    display:flex;
+    justify-content: space-around;
+    flex-wrap:wrap;
+    padding:20px;
+}
+.service-box {
+    background:linear-gradient(#B99976, blanchedalmond);
+  border-radius: 12px;
+  padding: 20px;
+  width: 40%;
+  min-width: 300px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.about-box {
+    background:linear-gradient(#B99976, blanchedalmond);
+    padding:10px;
+    border-radius:7px;
+     margin: auto;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     
-    padding:300px;
-    
-    font-size: larger;
 }
 .contact {
-  background: white;
+  background: #E6D6BE;
   color: black;
   padding: 80px 20px;
   text-align: center;
-  background-color: #B99976;
+   
 }
 .footer {
     text-align: center;
-    background-color: blanchedalmond;
+    background-color: #E6D6BE;
     font-size: large;
 }
+.box:hover {
+    transform: scale(1.1,1.1);
+    transition: 1s;
+}
+.service-box:hover {
+    transform: scale(1.1,1.1);
+    transition: 1s;
+}
+.about-box:hover {
+    transform: scale(1.1,1.1);
+    transition: 1s;
+}
+.contact:hover {
+     transform: scale(1.1,1.1);
+    transition: 1s;
+}
+html {
+    scroll-behavior: smooth;
+}
+
 
