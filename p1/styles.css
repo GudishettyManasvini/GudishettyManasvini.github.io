@@ -23,13 +23,15 @@ header a {
     display: flex;
     padding: 20px;
     justify-content:center;
+    
 }
 .box {
-    width: 300px;
-    padding:100px;
+    width: 200px;
+    padding:50px;
     background-color:#D2B48C;
-    border-radius: 20px;
-    margin: 10px;
+    border-radius: 10px;
+    margin: 50px;
+    
 }
 .btnsign-up {
     background-color:grey;
@@ -79,6 +81,7 @@ header a {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     
 }
+
 .contact {
   background: #E6D6BE;
   color: black;
