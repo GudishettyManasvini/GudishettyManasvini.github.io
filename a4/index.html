@@ -1,27 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <title>Create a New Account</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1><b>Facebook signup page</b></h1>
+  
+  <div class="form-box">
+    <h2>Create a new account</h2>
+    <p>It's quick and easy.</p>
+    </div>
+
     <form>
-        <p><input type="text" placeholder="first name"><input type="text" placeholder="surname">
-        </p>
-        
-        <p><input type="text" place holder="enter password"></p>
-        
-        <p><input type="date">
-            <fieldset>
-                <legend>Gender</legend>
-                <input type="radio" name="'Gender" />male
-                 <input type="radio" name="'Gender" />female
-                 </fieldset>
-                 <button>signup</button>
-            
-         
+      <table>
+        <tr>
+          <td><input type="text" placeholder="First name" required></td>
+          <td><input type="text" placeholder="Surname" required></td>
+        </tr>
+
+        <tr>
+          <td colspan="2"><label>Date of birth</label></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <select id="daySelect" required></select>
+            <select id="monthSelect" required></select>
+            <select id="yearSelect" required></select>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2"><label>Gender</label></td>
+        </tr>
+        <tr>
+          <td colspan="2" class="radio-row">
+            <label><input type="radio" name="gender" value="Female"> Female</label>
+            <label><input type="radio" name="gender" value="Male"> Male</label>
+            <label>
+              <input type="radio" name="gender" value="Custom" id="customGender"> Custom
+            </label>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+            <div id="customPronounBox"></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2"><input type="text" placeholder="Mobile number or email address" required></td>
+        </tr>
+
+        <tr>
+          <td colspan="2"><input type="password" placeholder="New password" required></td>
+        </tr>
+
+        <tr>
+          <td colspan="2"><button type="submit">Sign Up</button></td>
+        </tr>
+      </table>
     </form>
+
+    <a href="#">Already have an account?</a>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
