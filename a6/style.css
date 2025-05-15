@@ -1,0 +1,20 @@
+
+    
+
+
+.login {
+  width: 90%;
+  max-width: 500px;
+  height: 500px;
+  margin: 60px auto;
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 10px;
+  background: linear-gradient(to right, #7f5370, #ab6b78);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition:  0.3s ease;
+}
+@media only screen and (max-width: 600px) 
+  .login {
+    background: linear-gradient(to bottom right, rgb(60, 117, 119), cadetblue);
+  }
