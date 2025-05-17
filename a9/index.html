@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Cards</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+      <h1>Fruits Cart</h1>
+      
+      <div class="input-form">
+        <input type="text" id="pid" placeholder="ID" />
+        <input type="text" id="pname" placeholder="Name" />
+        <input type="number" id="pprice" placeholder="Price" />
+        <input type="text" id="pimg" placeholder="Image URL" />
+        <button onclick="addProduct()">Add to the Cart</button>
+      </div>
+      
+      <div class="product-container" id="productContainer"></div>
+  </div>
+
+  <script>
+    const products = [
+     { id: 1, name: "Apple", price: "₹150" , imgUrl: "apple.jpg" },
+      { id: 2, name: "Strawberry", price: "₹200", imgUrl: "strawberry.jpg" },
+      { id: 3, name: "Mango", price: "₹190", imgUrl: "Mango.jpg" },
+    ];
+
+    const container = document.getElementById("productContainer");
+
+    function renderProducts() {
+      container.innerHTML = "";
+      products.forEach(product => {
+        container.innerHTML += `
+          <div class="card">
+            <img src="${product.imgUrl}" alt="${product.name}"/>
+            <h2>${product.name}</h2>
+            <h3>${product.price}</h3>
+          </div>`;
+      });
+    }
+
+    function addProduct() {
+      const id = document.getElementById("pid").value;
+      const name = document.getElementById("pname").value;
+      const price = document.getElementById("pprice").value;
+      const imgUrl = document.getElementById("pimg").value;
+
+      if (!id || !name || !price || !imgUrl) {
+        alert("Please fill all fields.");
+        return;
+      }
+
+      products.push({
+        id: parseInt(id),
+        name,
+        price: parseFloat(price),
+        imgUrl
+      });
+
+      renderProducts();
+
+      
+      document.getElementById("pid").value = "";
+      document.getElementById("pname").value = "";
+      document.getElementById("pprice").value = "";
+      document.getElementById("pimg").value = "";
+    }
+
+    renderProducts();
+  </script>
+</body>
+</html>
