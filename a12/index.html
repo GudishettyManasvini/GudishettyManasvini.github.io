@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f3f8fa;
+      color: #333;
+      margin: 0;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c6975;
+      margin-bottom: 40px;
+    }
+
+    .product-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .product-card {
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 20px;
+      width: 200px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease;
+      text-align: center;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-name {
+      font-size: 18px;
+      font-weight: bold;
+      color: #2c6975;
+      margin-bottom: 10px;
+    }
+
+    .product-price {
+      font-size: 16px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>Products List</h1>
+
+  <div class="product-list">
+    <div class="product-card">
+      <div class="product-name">Product 1</div>
+      <div class="product-price">$39</div>
+    </div>
+    <div class="product-card">
+      <div class="product-name">Product 2</div>
+      <div class="product-price">$61</div>
+    </div>
+    <div class="product-card">
+      <div class="product-name">Product 3</div>
+      <div class="product-price">$45</div>
+    </div>
+  </div>
+</body>
+</html>
