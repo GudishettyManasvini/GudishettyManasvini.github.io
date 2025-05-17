@@ -1,0 +1,94 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 60px;
+  background: linear-gradient(to right);
+  margin: 0;
+  min-height: 100vh;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.box {
+  margin: 40px;
+  border: none;
+  border-radius: 24px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  padding: 35px 30px;
+  width: 420px;
+  background: linear-gradient(145deg #155a82);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+}
+
+input,
+button {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 14px 20px;
+  margin: 12px 0;
+  border: 2px solid lightgrey;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input {
+  width: 260px;
+  color:black;
+  background-color: #ffffff;
+  transition: box-shadow 0.3s ease;
+}
+
+input:focus {
+  box-shadow: 0 0 0 3px rgba(128, 186, 188, 0.3);
+}
+
+button {
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: #ffffff;
+  color:black;
+}
+
+button:hover {
+  background-color:pink;
+  color: #ffffff;
+}
+
+ol {
+  list-style-type: decimal;
+  padding-left: 20px;
+  margin-top: 24px;
+  width: 100%;
+  text-align: left;
+}
+
+li {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 10px 0;
+  padding: 8px 12px;
+  color:rgb(10, 41, 52);
+  background-color:lightpink;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+li:hover {
+  background-color: #d8eeee;
+}
