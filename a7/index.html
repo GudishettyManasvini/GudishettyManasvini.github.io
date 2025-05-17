@@ -2,22 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="caluclator-container">
-        <h2> Caluclator</h2>
-    
-    <input type="number" id="num1" placeholder="enter first number"><br>
-    <input type="number" id="num2" placeholder="enter second number"><br>
-    <button onclick="addition()">+</button>
-    <button onclick="subtraction()">-</button>
-    <button onclick="multiplication()">*</button>
-    <button onclick="division()">/</button>
-    <hr />
-    <div id="result"></div>
-    
+    <div class="calculator-container">
+      <h2>Calculator</h2>
+      <input type="number" id="num1" placeholder="Enter first number"><br>
+      <input type="number" id="num2" placeholder="Enter second number"><br><br>
+      <button onclick="performOperation('add')">+</button>
+      <button onclick="performOperation('subtract')">-</button>
+      <button onclick="performOperation('multiply')">*</button>
+      <button onclick="performOperation('divide')">/</button>
+      <hr />
+      <div id="result"></div>
+    </div>
 
     <script src="script.js"></script>
   </body>

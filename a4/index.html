@@ -1,68 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Create a New Account</title>
+  <meta charset="UTF-8">
+  <title>Facebook - Sign Up</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
-  <div class="form-box">
-    <h2>Create a new account</h2>
-    <p>It's quick and easy.</p>
+
+  <div class="container">
+    <h1 class="fb-header">facebook</h1>
+
+    <div class="form-box">
+      <h2>Create a new account</h2>
+      <p>It's quick and easy.</p>
+
+      <form>
+        <table>
+          <tr>
+            <td><input type="text" placeholder="First name" name="firstname" required></td>
+            <td><input type="text" placeholder="Surname" name="surname" required></td>
+          </tr>
+
+          <tr><td colspan="2"><label>Date of birth</label></td></tr>
+          <tr>
+            <td colspan="2">
+              <select id="daySelect" required></select>
+              <select id="monthSelect" required></select>
+              <select id="yearSelect" required></select>
+            </td>
+          </tr>
+
+          <tr><td colspan="2"><label>Gender</label></td></tr>
+          <tr>
+            <td colspan="2" class="radio-row">
+              <label><input type="radio" name="gender" value="Female"> Female</label>
+              <label><input type="radio" name="gender" value="Male"> Male</label>
+              <label><input type="radio" name="gender" value="Custom" id="customGender"> Custom</label>
+            </td>
+          </tr>
+
+          <tr><td colspan="2"><div id="customPronounBox"></div></td></tr>
+
+          <tr><td colspan="2"><input type="text" placeholder="Mobile number or email address" name="contact" required></td></tr>
+          <tr><td colspan="2"><input type="password" placeholder="New password" name="password" required></td></tr>
+          <tr><td colspan="2"><button type="submit">Sign Up</button></td></tr>
+        </table>
+      </form>
+
+      <a href="#">Already have an account?</a>
     </div>
-
-    <form>
-      <table>
-        <tr>
-          <td><input type="text" placeholder="First name" required></td>
-          <td><input type="text" placeholder="Surname" required></td>
-        </tr>
-
-        <tr>
-          <td colspan="2"><label>Date of birth</label></td>
-        </tr>
-        <tr>
-          <td colspan="2">
-            <select id="daySelect" required></select>
-            <select id="monthSelect" required></select>
-            <select id="yearSelect" required></select>
-          </td>
-        </tr>
-
-        <tr>
-          <td colspan="2"><label>Gender</label></td>
-        </tr>
-        <tr>
-          <td colspan="2" class="radio-row">
-            <label><input type="radio" name="gender" value="Female"> Female</label>
-            <label><input type="radio" name="gender" value="Male"> Male</label>
-            <label>
-              <input type="radio" name="gender" value="Custom" id="customGender"> Custom
-            </label>
-          </td>
-        </tr>
-
-        <tr>
-          <td colspan="2">
-            <div id="customPronounBox"></div>
-          </td>
-        </tr>
-
-        <tr>
-          <td colspan="2"><input type="text" placeholder="Mobile number or email address" required></td>
-        </tr>
-
-        <tr>
-          <td colspan="2"><input type="password" placeholder="New password" required></td>
-        </tr>
-
-        <tr>
-          <td colspan="2"><button type="submit">Sign Up</button></td>
-        </tr>
-      </table>
-    </form>
-
-    <a href="#">Already have an account?</a>
   </div>
 
   <script src="script.js"></script>
