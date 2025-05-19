@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #d2b48c, #a1887f); /* Pastel brown gradient */
+  background: linear-gradient(135deg, #d2b48c, #a1887f); 
   height: 100vh;
   display: flex;
   align-items: center;

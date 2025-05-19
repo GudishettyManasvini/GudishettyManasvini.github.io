@@ -4,11 +4,11 @@ async function fetchUserData() {
   resultDiv.textContent = "Loading...";
 
   try {
-    // Fetch all users
+   
     const userRes = await fetch('https://jsonplaceholder.typicode.com/users');
     const users = await userRes.json();
 
-    // Find user by email
+    
     const user = users.find(u => u.email.toLowerCase() === email.toLowerCase());
 
     if (!user) {
@@ -16,7 +16,7 @@ async function fetchUserData() {
       return;
     }
 
-    // Fetch posts by user ID
+   
     const postRes = await fetch(`https://jsonplaceholder.typicode.com/posts?userId=${user.id}`);
     const posts = await postRes.json();
 
