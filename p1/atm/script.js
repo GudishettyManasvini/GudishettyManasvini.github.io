@@ -11,27 +11,47 @@ const login = () => {
   const msg = document.getElementById("msg");
   const box = document.getElementById("login-box");
 
-  const customer = customers.find(
-    (c) => c.cart === card && c.pin === pin
-  );
+  const customer = customers.find((c) => c.cart === card && c.pin === pin);
 
   if (customer) {
     currentCustomer = customer;
-    box.innerHTML = `
-      <h2>Welcome, ${customer.name}!</h2>
-      <p>Balance: ₹<span id="balance">${customer.balance}</span></p>
-      <select id="action">
-        <option value="">-- Select Action --</option>
-        <option value="withdraw">Withdraw</option>
-        <option value="deposit">Deposit</option>
-      </select>
-      <input type="number" id="amount" placeholder="Enter Amount" />
-      <button onclick="processTransaction()">Submit</button>
-      <button onclick="logout()" style="margin-left: 10px; background-color: #bdb2ff;">Logout</button>
-      <p id="msg"></p>
-    `;
+    renderDashboard();
   } else {
     msg.textContent = "Invalid card number or PIN!";
+  }
+};
+
+const renderDashboard = () => {
+  const box = document.getElementById("login-box");
+  box.innerHTML = `
+    <h2>Welcome, ${currentCustomer.name}!</h2>
+    <p>Balance: ₹<span id="balance">${currentCustomer.balance}</span></p>
+    
+    <select id="action" onchange="handleActionChange()">
+      <option value="">-- Select Action --</option>
+      <option value="withdraw">Withdraw</option>
+      <option value="deposit">Deposit</option>
+      <option value="transfer">Fund Transfer</option>
+    </select>
+
+    <input type="number" id="amount" placeholder="Enter Amount" />
+    <input type="text" id="recipient" placeholder="Recipient Card No." style="display: none;" />
+
+    <button onclick="processTransaction()">Submit</button>
+    <button onclick="logout()" style="margin-left: 10px; background-color: #bdb2ff;">Logout</button>
+    <p id="msg"></p>
+  `;
+};
+
+const handleActionChange = () => {
+  const action = document.getElementById("action").value;
+  const recipientInput = document.getElementById("recipient");
+
+  // Show recipient input only for fund transfer
+  if (action === "transfer") {
+    recipientInput.style.display = "inline-block";
+  } else {
+    recipientInput.style.display = "none";
   }
 };
 
@@ -40,6 +60,7 @@ const processTransaction = () => {
   const amount = parseFloat(document.getElementById("amount").value);
   const msg = document.getElementById("msg");
   const balanceEl = document.getElementById("balance");
+  const recipientCard = document.getElementById("recipient").value;
 
   if (!action || isNaN(amount) || amount <= 0) {
     msg.textContent = "Please select action and enter a valid amount.";
@@ -54,10 +75,31 @@ const processTransaction = () => {
     currentCustomer.balance -= amount;
   } else if (action === "deposit") {
     currentCustomer.balance += amount;
+  } else if (action === "transfer") {
+    if (!recipientCard || recipientCard === currentCustomer.cart) {
+      msg.textContent = "Enter a valid recipient card number.";
+      return;
+    }
+
+    const recipient = customers.find(c => c.cart === recipientCard);
+
+    if (!recipient) {
+      msg.textContent = "Recipient not found!";
+      return;
+    }
+
+    if (amount > currentCustomer.balance) {
+      msg.textContent = "Insufficient balance for transfer!";
+      return;
+    }
+
+    currentCustomer.balance -= amount;
+    recipient.balance += amount;
+
+    msg.textContent = `₹${amount} transferred to ${recipient.name} (Card: ${recipient.cart}).`;
   }
 
   balanceEl.textContent = currentCustomer.balance;
-  msg.textContent = `Transaction successful! New balance: ₹${currentCustomer.balance}`;
 };
 
 const logout = () => {
