@@ -47,7 +47,7 @@ const handleActionChange = () => {
   const action = document.getElementById("action").value;
   const recipientInput = document.getElementById("recipient");
 
-  // Show recipient input only for fund transfer
+  
   if (action === "transfer") {
     recipientInput.style.display = "inline-block";
   } else {
