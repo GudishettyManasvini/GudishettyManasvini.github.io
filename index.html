@@ -5,114 +5,145 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Manasvini | MERN Stack Developer</title>
     <style>
-  body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to right, #e0f2fe, #cbd5e1); 
-  color: #333;
-  margin: 0;
-  padding: 2rem;
-  line-height: 1.6;
-  transition: background 0.5s ease;
-}
-
-
-      h1 {
-        font-size: 2.5rem;
-        color: #2b6cb0;
-        transition: color 0.3s ease;
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(to right, #e0f7fa, #e3f2fd);
+        margin: 0;
+        padding: 0;
+        color: #333;
+        line-height: 1.6;
       }
 
-      h2 {
-        font-size: 1.8rem;
-        color: #2c5282;
-        margin-bottom: 1rem;
+      .container {
+        max-width: 960px;
+        margin: auto;
+        padding: 2rem;
+      }
+
+      header {
+        text-align: center;
+        padding: 3rem 1rem 2rem;
+        background: linear-gradient(135deg, #90cdf4, #63b3ed);
+        color: white;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+      }
+
+      header h1 {
+        font-size: 3rem;
+        margin: 0;
+      }
+
+      header h2 {
+        font-weight: 400;
+        margin-top: 0.5rem;
       }
 
       h3 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         margin-top: 2rem;
         color: #2a4365;
+        border-bottom: 2px solid #cbd5e0;
+        padding-bottom: 0.5rem;
       }
 
-      ol {
-        padding-left: 1.5rem;
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+        margin-top: 1rem;
       }
 
-      a {
+      .card {
+        background: white;
+        padding: 1.2rem;
+        border-radius: 12px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .card a {
         text-decoration: none;
         color: #2b6cb0;
-        font-weight: 500;
-        transition: all 0.3s ease;
+        font-weight: 600;
+        display: block;
       }
 
-      a:hover {
+      .card a:hover {
         color: #1a365d;
-        padding-left: 5px;
       }
 
-      hr {
-        border: none;
-        height: 1px;
-        background-color: #cbd5e0;
-        margin: 2rem 0;
+      footer {
+        text-align: center;
+        padding: 2rem 1rem;
+        color: #666;
+        font-size: 0.9rem;
       }
 
       @media (max-width: 600px) {
-        body {
-          padding: 1rem;
-        }
-
-        h1 {
+        header h1 {
           font-size: 2rem;
         }
 
-        h2 {
-          font-size: 1.4rem;
+        header h2 {
+          font-size: 1.2rem;
         }
 
         h3 {
-          font-size: 1.2rem;
+          font-size: 1.4rem;
         }
       }
     </style>
   </head>
   <body>
-    <h1>Gudishetty Manasvini</h1>
-    <h2>MERN Stack Developer</h2>
+    <header>
+      <h1>Gudishetty Manasvini</h1>
+      <h2>MERN Stack Developer</h2>
+    </header>
 
-    <h3>My Projects</h3>
-    <ol>
-      <li><a href="p1">My Portfolio</a></li>
-      <li><a href="https://react-notes-one-tau.vercel.app/">React-notes</a></li>
-      <li><a href="https://github.com/GudishettyManasvini/mongo-query-gcet">Mongo-query-gcet</a></li>
-      <li><a href="http://localhost:8080/">Nodejs</a></li>
+    <div class="container">
+      <h3>My Projects</h3>
+      <div class="card-grid">
+        <div class="card"><a href="p1">My Portfolio</a></div>
+        <div class="card"><a href="https://react-notes-one-tau.vercel.app/">React Notes</a></div>
+        <div class="card"><a href="https://github.com/GudishettyManasvini/mongo-query-gcet">Mongo Query GCET</a></div>
+        <div class="card"><a href="http://localhost:8080/">Node.js App (Localhost)</a></div>
+      </div>
 
-    </ol>
+      <h3>My Assignments</h3>
+      <div class="card-grid">
+        <!-- Automatically generate assignment cards -->
+        <!-- You can use JS in future, for now doing static -->
+        <div class="card"><a href="a1">Assignment 1</a></div>
+        <div class="card"><a href="a2">Assignment 2</a></div>
+        <div class="card"><a href="a3">Assignment 3</a></div>
+        <div class="card"><a href="a4">Assignment 4</a></div>
+        <div class="card"><a href="a5">Assignment 5</a></div>
+        <div class="card"><a href="a6">Assignment 6</a></div>
+        <div class="card"><a href="a7">Assignment 7</a></div>
+        <div class="card"><a href="a8">Assignment 8</a></div>
+        <div class="card"><a href="a9">Assignment 9</a></div>
+        <div class="card"><a href="a10">Assignment 10</a></div>
+        <div class="card"><a href="a11">Assignment 11</a></div>
+        <div class="card"><a href="a12">Assignment 12</a></div>
+        <div class="card"><a href="a13">Assignment 13</a></div>
+        <div class="card"><a href="a14">Assignment 14</a></div>
+        <div class="card"><a href="a15">Assignment 15</a></div>
+        <div class="card"><a href="a16">Assignment 16</a></div>
+        <div class="card"><a href="a17">Assignment 17</a></div>
+        <div class="card"><a href="a18">Assignment 18</a></div>
+        <div class="card"><a href="a19">Assignment 19</a></div>
+        <div class="card"><a href="a20">Assignment 20</a></div>
+      </div>
+    </div>
 
-    <hr />
-
-    <h3>My Assignments</h3>
-    <ol>
-      <li><a href="a1">Assignment 1</a></li>
-      <li><a href="a2">Assignment 2</a></li>
-      <li><a href="a3">Assignment 3</a></li>
-      <li><a href="a4">Assignment 4</a></li>
-      <li><a href="a5">Assignment 5</a></li>
-      <li><a href="a6">Assignment 6</a></li>
-      <li><a href="a7">Assignment 7</a></li>
-      <li><a href="a8">Assignment 8</a></li>
-      <li><a href="a9">Assignment 9</a></li>
-      <li><a href="a10">Assignment 10</a></li>
-      <li><a href="a11">Assignment 11</a></li>
-      <li><a href="a12">Assignment 12</a></li>
-      <li><a href="a13">Assignment 13</a></li>
-      <li><a href="a14">Assignment 14</a></li>
-      <li><a href="a15">Assignment 15</a></li>
-      <li><a href="a16">Assignment 16</a></li>
-      <li><a href="a17">Assignment 17</a></li>
-      <li><a href="a18">Assignment 18</a></li>
-      <li><a href="a19">Assignment 19</a></li>
-      <li><a href="a20">Assignment 20</a></li>
-    </ol>
+    <footer>
+      &copy; 2025 Gudishetty Manasvini. All rights reserved.
+    </footer>
   </body>
 </html>
